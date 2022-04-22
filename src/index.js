@@ -24,7 +24,7 @@ export async function fetchImages() {
             return
         }
         if (newImageService.page === 1) {
-            Notify.info(`Hooray! We found ${totalHits} images.`);
+            Notify.success(`Hooray! We found ${totalHits} images.`);
         }
         newImageService.incrementPage();
         renderImages(hits);
