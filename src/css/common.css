@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body, button, input {
+    font-family: 'Roboto Slab',
+    serif;
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+input{
+    margin-right: 20px;
+    height: 30px;
+}
+
+button {
+    width: 80px;
+    border: 1px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #e2ea41;
+    color: rgb(14, 11, 11);
+    font-size: 15px;
+}
+
+button:hover,
+button:focus {
+    color: white;
+    background-color: rgb(97, 164, 223);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.photo-card {
+    position: relative;
+    margin: 10px;
+    width: calc((100% - 80px)/4);
+    height: auto;    
+    cursor: pointer;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: opacity 0.35s,
+    transform 0.35s;
+    transform: scale(1.2);
+}
+
+.photo-card:hover img,
+.photo-card:hover div {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.photo-card:hover div {
+    transform: translateY(0);
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin: -3px;
+    width: 100%;
+    height: 50px;
+
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+
+    background: rgba(0, 0, 0, 0.6);
+    color: rgb(224, 216, 216);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.2s, transform 0.35s;
+}
+
+.info-item {
+    display: flex;
+    margin: 3px;
+    font-size: 12px;
+}
+
+b {
+    text-align: center;
+}
